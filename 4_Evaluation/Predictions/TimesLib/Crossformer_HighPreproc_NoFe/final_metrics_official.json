@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/4_Evaluation/Predictions/TimesLib/Crossformer_HighPreproc_NoFe",
+  "best_threshold": 0.02,
+  "train_thresh": {
+    "auroc": 0.7697025706564422,
+    "auprc": 0.06953485737370113,
+    "accuracy": 0.8238710732984293,
+    "f_measure": 0.0993892746590814,
+    "utility": 0.27350076422812963
+  },
+  "test": {
+    "auroc": 0.8165072194471857,
+    "auprc": 0.11907431198479922,
+    "accuracy": 0.7638458272761189,
+    "f_measure": 0.09864722201762785,
+    "utility": 0.3576792973414989
+  }
+}

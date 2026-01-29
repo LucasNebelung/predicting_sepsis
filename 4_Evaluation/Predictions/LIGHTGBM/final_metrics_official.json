@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/4_Evaluation/Predictions/LIGHTGBM",
+  "best_threshold": 0.55,
+  "train_thresh": {
+    "auroc": 0.7801679132933586,
+    "auprc": 0.08728072673632646,
+    "accuracy": 0.8588350785340314,
+    "f_measure": 0.11634575993445309,
+    "utility": 0.31265322024755005
+  },
+  "test": {
+    "auroc": 0.8174120018150173,
+    "auprc": 0.10967545259124499,
+    "accuracy": 0.8494262263447016,
+    "f_measure": 0.12610830082317587,
+    "utility": 0.3829100557114535
+  }
+}

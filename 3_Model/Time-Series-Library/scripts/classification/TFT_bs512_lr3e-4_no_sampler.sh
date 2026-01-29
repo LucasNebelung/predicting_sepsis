@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -e
+
+export CUDA_VISIBLE_DEVICES=0
+
+python -u run.py \
+  --task_name classification \
+  --is_training 1 \
+  --data SepsisPSV \
+  --root_path ./dataset \
+  --train_dir raw_PSV_Patient_Files/PSV_Patients_TRAIN_FIT \
+  --test_dir raw_PSV_Patient_Files/PSV_Patients_TEST \
+  --val_ratio 0.2 \
+  --model TemporalFusionTransformer \
+  --model_id Sepsis_TFT_HIGH \
+  --preproc_mode HIGH_PREPROC_NO_FE \
+  --cache_psv 1 \
+  --rebuild_cache 0 \
+  --add_missing_mask 0 \
+  --seq_len 48 \
+  --batch_size 512 \
+  --num_workers 6 \
+  --learning_rate 0.0001 \
+  --train_epochs 12 \
+  --patience 2 \
+  --d_model 64 \
+  --d_ff 256 \
+  --n_heads 4 \
+  --e_layers 2 \
+  --dropout 0.3 \
+  --itr 1 \
+  --pos_weight 20 \
+  --clip_grad 1.0 \
+  --des TFT_seq48_bs512_lr1e-4_dm64_df256_do03_p1_pw55_NOsampler_clip1

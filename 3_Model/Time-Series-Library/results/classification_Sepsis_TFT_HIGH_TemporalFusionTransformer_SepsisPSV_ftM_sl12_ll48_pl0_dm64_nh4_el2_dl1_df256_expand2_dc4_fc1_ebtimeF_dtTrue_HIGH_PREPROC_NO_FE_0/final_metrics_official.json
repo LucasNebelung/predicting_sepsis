@@ -1,0 +1,21 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/3_Model/Time-Series-Library/results/classification_Sepsis_TFT_HIGH_TemporalFusionTransformer_SepsisPSV_ftM_sl12_ll48_pl0_dm64_nh4_el2_dl1_df256_expand2_dc4_fc1_ebtimeF_dtTrue_HIGH_PREPROC_NO_FE_0",
+  "best_threshold": 0.48,
+  "train_thresh": {
+    "auroc": 0.8067571540777337,
+    "auprc": 0.08612233614540307,
+    "accuracy": 0.7930791884816754,
+    "f_measure": 0.10017787264318748,
+    "utility": 0.32020858932478197
+  },
+  "test": {
+    "auroc": 0.8272498698459001,
+    "auprc": 0.10607593411553891,
+    "accuracy": 0.772487810526045,
+    "f_measure": 0.10185243965922221,
+    "utility": 0.3670278792585141
+  }
+  # Training arguments were sequence lenghth 12h and Pos Weight 55 with no additional weightedrandomsampler
+}
+
+  

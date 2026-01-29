@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/4_Evaluation/Predictions/TimesLib/TFT_HighPreproc_NoFe",
+  "best_threshold": 0.023,
+  "train_thresh": {
+    "auroc": 0.8091384754069378,
+    "auprc": 0.08669932228478043,
+    "accuracy": 0.849967277486911,
+    "f_measure": 0.11280959752321981,
+    "utility": 0.30270326969760547
+  },
+  "test": {
+    "auroc": 0.8293185574278208,
+    "auprc": 0.11172897025895513,
+    "accuracy": 0.8329012877745043,
+    "f_measure": 0.12322594798926709,
+    "utility": 0.39780272144861545
+  }
+}

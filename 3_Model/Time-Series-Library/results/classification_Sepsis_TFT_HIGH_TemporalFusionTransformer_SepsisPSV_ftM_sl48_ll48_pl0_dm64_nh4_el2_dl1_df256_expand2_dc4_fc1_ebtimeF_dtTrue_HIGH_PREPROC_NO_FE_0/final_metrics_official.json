@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/3_Model/Time-Series-Library/results/classification_Sepsis_TFT_HIGH_TemporalFusionTransformer_SepsisPSV_ftM_sl48_ll48_pl0_dm64_nh4_el2_dl1_df256_expand2_dc4_fc1_ebtimeF_dtTrue_HIGH_PREPROC_NO_FE_0",
+  "best_threshold": 0.965,
+  "train_thresh": {
+    "auroc": 0.7780393785694312,
+    "auprc": 0.07266090129921585,
+    "accuracy": 0.8457787958115183,
+    "f_measure": 0.10957868883430946,
+    "utility": 0.2986034105553391
+  },
+  "test": {
+    "auroc": 0.8037797085805494,
+    "auprc": 0.08223527543415034,
+    "accuracy": 0.826745442616202,
+    "f_measure": 0.11569840931102976,
+    "utility": 0.36990699069906996
+  }
+}

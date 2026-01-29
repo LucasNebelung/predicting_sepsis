@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/4_Evaluation/Predictions/LIGHTGBM_LowPreproc_NoFe",
+  "best_threshold": 0.456,
+  "train_thresh": {
+    "auroc": 0.8095621116772121,
+    "auprc": 0.09985651886801765,
+    "accuracy": 0.8009980366492147,
+    "f_measure": 0.0997705573236622,
+    "utility": 0.30572721551233256
+  },
+  "test": {
+    "auroc": 0.8419783567287565,
+    "auprc": 0.12013774724180594,
+    "accuracy": 0.7923833476991162,
+    "f_measure": 0.11068097593232948,
+    "utility": 0.397235017619409
+  }
+}

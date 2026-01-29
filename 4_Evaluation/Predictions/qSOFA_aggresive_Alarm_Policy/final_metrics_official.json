@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/4_Evaluation/Predictions/qSOFA_aggresive_Alarm_Policy",
+  "best_threshold": 0.02,
+  "train_thresh": {
+    "auroc": 0,
+    "auprc": 0,
+    "accuracy": 0.7718913612565445,
+    "f_measure": 0.05208050040794126,
+    "utility": 0.00357838583031132
+  },
+  "test": {
+    "auroc": 0,
+    "auprc": 0,
+    "accuracy": 0.74749134836809,
+    "f_measure": 0.06366205917780772,
+    "utility": 0.09231393727608052
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/4_Evaluation/Predictions/qSOFA_PROXY_HighPreproc_NoFe",
+  "best_threshold": 0.02,
+  "train_thresh": {
+    "auroc": 0,
+    "auprc": 0,
+    "accuracy": 0.9449607329842932,
+    "f_measure": 0.06243032329988852,
+    "utility": 0.03960799592411664
+  },
+  "test": {
+    "auroc": 0,
+    "auprc": 0,
+    "accuracy": 0.94283490499286,
+    "f_measure": 0.056080722251725966,
+    "utility": 0.027942205985304416
+  }
+}
