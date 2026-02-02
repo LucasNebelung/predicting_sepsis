@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/3_Model/Time-Series-Library/results/classification_Sepsis_TimesNet_HIGH_CSV_TimesNet_SepsisCSV_ftM_sl48_ll48_pl0_dm128_nh8_el3_dl1_df512_expand2_dc4_fc1_ebtimeF_dtTrue_TimesNet_on_CSV_seq48_bs256_topk3_kernels6_dm128_el3_lr1e-3_0",
+  "best_threshold": 0.0185,
+  "train_thresh": {
+    "auroc": 0.7760754251938408,
+    "auprc": 0.06283999899781022,
+    "accuracy": 0.778223167539267,
+    "f_measure": 0.08996307485733468,
+    "utility": 0.2660832559115294
+  },
+  "test": {
+    "auroc": 0.8090121296395343,
+    "auprc": 0.08890133483555615,
+    "accuracy": 0.7593784976392944,
+    "f_measure": 0.09522427408724256,
+    "utility": 0.33319920227316846
+  }
+}

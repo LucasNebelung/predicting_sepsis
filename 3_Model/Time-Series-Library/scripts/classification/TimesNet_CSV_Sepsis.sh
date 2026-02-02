@@ -1,7 +1,5 @@
 export CUDA_VISIBLE_DEVICES=0
 
-model_name=iTransformer
-
 python -u run.py \
   --task_name classification \
   --is_training 1 \
@@ -12,23 +10,22 @@ python -u run.py \
   --test_dir High_Preproc_NoFe_CSV/test_HIGH_PREPROC_NO_FE.csv \
   --k_fold 5 \
   --fold 0 \
-  --model $model_name \
-  --model_id Sepsis_iTransformer_HIGH_CSV \
+  --model TimesNet \
+  --model_id Sepsis_TimesNet_HIGH_CSV \
   --seq_len 48 \
   --sample_step 1 \
   --batch_size 256 \
-  --num_workers 6 \
-  --learning_rate 0.0005 \
-  --train_epochs 12 \
+  --num_workers 8 \
+  --learning_rate 0.001 \
+  --train_epochs 20 \
   --patience 2 \
-  --d_model 256 \
-  --d_ff 1024 \
-  --n_heads 8 \
+  --d_model 128 \
+  --d_ff 512 \
   --e_layers 3 \
-  --dropout 0.15 \
+  --dropout 0.2 \
   --top_k 3 \
-  --pos_weight 25 \
-  --clip_grad 1.0 \
+  --num_kernels 6 \
   --itr 1 \
-  --des iTransformer_SepsisCSV_High
-  
+  --pos_weight 20 \
+  --clip_grad 1.0 \
+  --des TimesNet_on_CSV_seq48_bs256_topk3_kernels6_dm128_el3_lr1e-3

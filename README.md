@@ -1,17 +1,17 @@
-# [Early Sepsis Detection]
+# Early Sepsis Prediction
 
 ## Repository Link
 
-[https://github.com/LucasNebelung/detecting_Sepsis]
+https://github.com/LucasNebelung/predicting_sepsis
 
 ## Description
 
-[Short project description here. Briefly summarize the problem you are trying to solve and the approach you're taking.
-This project focuses on **early detection of sepsis in ICU patients** using multivariate time-series data from the PhysioNet/Computing in Cardiology 2019 Challenge.  ]
+This project focuses on **early detection of sepsis in ICU patients** using multivariate time-series data from the PhysioNet/Computing in Cardiology 2019 Challenge.
 
 ### Task Type
 
-[Classification – binary prediction of sepsis onset (SepsisLabel)]
+Classification: Binary prediction of sepsis onset (SepsisLabel) with hourly risk scores (probability of onset).
+
 
 ### Results Summary
 

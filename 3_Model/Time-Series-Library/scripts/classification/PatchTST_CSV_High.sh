@@ -5,13 +5,13 @@ python -u run.py \
   --is_training 1 \
   --data SepsisCSV \
   --root_path /teamspace/studios/this_studio/detecting_Sepsis/data \
-  --train_dir Low_Preproc_WithMissing_CSV/train_fit_LOW_PREPROC_WITH_MISSING.csv \
-  --thresh_dir Low_Preproc_WithMissing_CSV/train_thresh_LOW_PREPROC_WITH_MISSING.csv \
-  --test_dir Low_Preproc_WithMissing_CSV/test_LOW_PREPROC_WITH_MISSING.csv \
+  --train_dir High_Preproc_NoFe_CSV/train_fit_HIGH_PREPROC_NO_FE.csv \
+  --thresh_dir High_Preproc_NoFe_CSV/train_thresh_HIGH_PREPROC_NO_FE.csv \
+  --test_dir High_Preproc_NoFe_CSV/test_HIGH_PREPROC_NO_FE.csv \
   --k_fold 5 \
   --fold 0 \
   --model PatchTST \
-  --model_id Sepsis_PatchTST_LOW_CSV \
+  --model_id Sepsis_PatchTST_HIGH_CSV \
   --seq_len 48 \
   --sample_step 1 \
   --batch_size 256 \

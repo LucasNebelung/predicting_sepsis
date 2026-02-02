@@ -13,22 +13,21 @@ python -u run.py \
   --k_fold 5 \
   --fold 0 \
   --model $model_name \
-  --model_id Sepsis_iTransformer_HIGH_CSV \
+  --model_id Sepsis_iTransformer_HIGH_CSV_FINAL \
   --seq_len 48 \
   --sample_step 1 \
   --batch_size 256 \
-  --num_workers 6 \
-  --learning_rate 0.0005 \
+  --num_workers 12 \
+  --learning_rate 0.0001 \
   --train_epochs 12 \
   --patience 2 \
-  --d_model 256 \
-  --d_ff 1024 \
-  --n_heads 8 \
-  --e_layers 3 \
-  --dropout 0.15 \
+  --d_model 128 \
+  --d_ff 512 \
+  --n_heads 4 \
+  --e_layers 2 \
+  --dropout 0.30 \
   --top_k 3 \
-  --pos_weight 25 \
-  --clip_grad 1.0 \
+  --pos_weight 15 \
+  --clip_grad 0.5 \
   --itr 1 \
-  --des iTransformer_SepsisCSV_High
-  
+  --des iTransformer_SepsisCSV_FINAL_small_reg_lr1e-4_bs128_pw15_clip0p5
