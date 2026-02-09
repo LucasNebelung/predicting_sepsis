@@ -1,24 +1,46 @@
 # Baseline Model
 
-**[Notebook](baseline_model.ipynb)**
+**[LightGBM Notebook](LIGHTGBM.ipynb)**
+**[Clinical Baseline (qSOFA proxy) Notebook](qSOFA.ipynb)**
 
 ## Baseline Model Results
 
 ### Model Selection
-- **Baseline Model Type:** [e.g., Random Forest, Logistic Regression, Linear Regression, Naive Bayes, etc.]
-- **Rationale:** [Brief explanation of why this model was chosen as baseline]
+ **Baseline model type:** LightGBM (gradient-boosted decision trees)
+ **Clinical comparator:** partial qSOFA proxy (rule-based, non-ML)
+ **Rationale:**
+    LightGBM is robust on sparse/imbalanced tabular clinical data
+    Fast to train and easy to iterate on
+    Strong prior evidence in PhysioNet 2019 sepsis work]
 
-### Model Performance
-- **Evaluation Metric:** [e.g., Accuracy, F1-Score, Precision, Recall, MSE, MAE, R², etc.]
-- **Performance Score:** [e.g., 85% accuracy, F1-score of 0.78, MSE of 0.15]
-- **Cross-Validation Score:** [Mean and standard deviation of CV scores, e.g., 0.82 ± 0.03]
+### Model Performance (Official PhysioNet Evaluator)
+**Primary metric:** Utility score (clinical-timing-aware)
+**Best LightGBM baseline:**
+  Test Utility: **0.4158**
+  AUROC: **0.8535**
+  AUPRC: **0.1353**
+  Accuracy: **0.7849**
+  F1: **0.1114**
+**qSOFA proxy baseline (for reference):**
+  Test Utility: **0.0279** (threshold-optimized proxy)
+  Aggressive alarm policy variant: **0.0923** utility
+
+### Cross-Validation / Validation Strategy
+-Patient-level split to prevent leakage.
+-80/20 train-test split, plus a 5% patient-level holdout from training (`train_thresh`) for threshold optimization.
+-LightGBM was tuned with stronger validation practices than deep models (which mostly used single-fold settings in this project stage).
 
 ### Evaluation Methodology
-- **Data Split:** [Train/Validation/Test split ratios, e.g., 70/15/15]
-- **Evaluation Metrics:** [List all metrics used and justify why they are appropriate for this problem]
+- **Data split:** Patient-wise split (`train_fit`, `train_thresh`, `test`)
+- **Thresholding:** Standardized threshold sweep on `train_thresh` to maximize utility
+- **Metrics:** AUROC, AUPRC, Accuracy, F1, and official Utility
 
 ### Metric Practical Relevance
-[Explain the practical relevance and business impact of each chosen evaluation metric. How do these metrics translate to real-world performance and decision-making? What do the metric values mean in the context of your specific problem domain?]
+- **Utility score** is the most clinically relevant metric here because it rewards *timely* detection and penalizes late/missed detection.
+- **AUROC/AUPRC** summarize ranking quality under imbalance, while **F1/Accuracy** provide threshold-dependent operating-point context.
+- In this application, a model with better utility is preferred even when accuracy is lower, because clinical timing dominates outcome value.
 
 ## Next Steps
-This baseline model serves as a reference point for evaluating more sophisticated models in the [Model Definition and Evaluation](../3_Model/README.md) phase.
+This baseline serves as the reference for transformer-based and time-series deep-learning models in [3_Model/Time-Series-Library](../3_Model/README.md).
+
+

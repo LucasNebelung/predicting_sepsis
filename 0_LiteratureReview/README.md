@@ -23,8 +23,8 @@ Approaches or solutions that have been tried before on similar projects.
 
 - **Source 3**: [Title of Source 3]
 
-  - **[Link]()**
-  - **Objective**:
-  - **Methods**:
-  - **Outcomes**:
-  - **Relation to the Project**:
+  - **[https://arxiv.org/abs/2407.13278]()**
+  - **Objective**: Provide a comprehensive survey of deep time series models across major tasks (forecasting, classification, imputation, anomaly detection) and introduce a fair benchmarking framework for comparing them.
+  - **Methods**: Reviews models by basic modules (e.g., stationarization, decomposition, Fourier analysis) and architectural families (MLP/CNN/RNN/GNN/Transformer). Develops and releases Time Series Library (TSLib), implementing 30 models and evaluating them on 30 datasets with standardized protocols across four tasks.
+  - **Outcomes**:Releases TSLib as an open benchmark and reports cross-task comparisons showing that different model structures excel on different tasks; enables reproducible, apples-to-apples evaluation of deep time series methods.
+  - **Relation to the Project**:Included for comparison/benchmarking and because the authors provide TSLib, which can be used to fairly evaluate alternative time-series architectures (e.g., Transformer-based models) against the project baseline.
