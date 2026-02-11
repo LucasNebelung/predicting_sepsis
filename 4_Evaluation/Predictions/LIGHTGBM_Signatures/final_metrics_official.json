@@ -1,0 +1,18 @@
+{
+  "model_parent_dir": "/teamspace/studios/this_studio/detecting_Sepsis/4_Evaluation/Predictions/LIGHTGBM_Signatures",
+  "best_threshold": 0.4,
+  "train_thresh": {
+    "auroc": 0.8386289426589764,
+    "auprc": 0.11153035823970173,
+    "accuracy": 0.7730039267015707,
+    "f_measure": 0.10524958080742938,
+    "utility": 0.3845895645398148
+  },
+  "test": {
+    "auroc": 0.8532946064293335,
+    "auprc": 0.13667109056744195,
+    "accuracy": 0.7593270381186399,
+    "f_measure": 0.10473171023509002,
+    "utility": 0.4065794814775595
+  }
+}
