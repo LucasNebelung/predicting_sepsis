@@ -17,6 +17,7 @@ class Model(nn.Module):
         self.task_name = configs.task_name
         self.seq_len = configs.seq_len
         self.pred_len = configs.pred_len
+        self.classifier = nn.LazyLinear(1)
 
     def forecast(self, x_enc, x_mark_enc, x_dec, x_mark_dec):
         means = x_enc.mean(1, keepdim=True).detach()
@@ -40,4 +41,22 @@ class Model(nn.Module):
         if self.task_name == 'zero_shot_forecast':
             dec_out = self.forecast(x_enc, x_mark_enc, x_dec, x_mark_dec)
             return dec_out
+        if self.task_name == 'classification':
+            means = x_enc.mean(1, keepdim=True).detach()
+            x_norm = x_enc.sub(means)
+            stdev = torch.sqrt(torch.var(x_norm, dim=1, keepdim=True, unbiased=False) + 1e-5)
+            x_norm = x_norm.div(stdev)
+
+            x_tokens = x_norm.permute(0, 2, 1)
+            _, dec_out = self.model.predict_quantiles(
+                x_tokens.detach().cpu().numpy(),
+                prediction_length=1,
+                quantile_levels=[0.1, 0.5, 0.9],
+            )
+
+            dec_out = torch.stack(dec_out, dim=0).to(device=x_enc.device, dtype=x_enc.dtype)
+            # dec_out: (B, 1, C), pooled representation: (B, C)
+            pooled_repr = dec_out[:, -1, :]
+            logits = self.classifier(pooled_repr)
+            return logits
         return None
